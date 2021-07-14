@@ -1,5 +1,6 @@
 import 'package:doorbell/views/connect.dart';
 import 'package:doorbell/views/login.dart';
+import 'package:doorbell/views/startup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,11 +26,13 @@ class MyApp extends StatelessWidget {
               onBackground: Colors.white,
               onPrimary: Colors.white,
               onSecondary: Colors.white,
-              brightness: Brightness.light,
+              brightness: Brightness.dark,
               surface: Color(0xFF115792))),
-      home: LoginPage(),
+      home: StartupPage(),
       debugShowCheckedModeBanner: false,
       routes: {
+        'login': (_) => LoginPage(),
+        'register': (_) => LoginPage(),
         'addDevice': (_) => ConnectionPage(),
       },
     );

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ConnectionPage extends StatefulWidget {
+class DeviceScreen extends StatefulWidget {
+  DeviceScreen({Key? key}) : super(key: key);
+
   @override
-  State<ConnectionPage> createState() => ConnectionScreen();
+  _DeviceScreenState createState() => _DeviceScreenState();
 }
 
-class ConnectionScreen extends State<ConnectionPage> {
+class _DeviceScreenState extends State<DeviceScreen> {
   @override
   Widget build(BuildContext context) {
+    final String name = ModalRoute.of(context)!.settings.name as String;
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
@@ -22,7 +25,7 @@ class ConnectionScreen extends State<ConnectionPage> {
                 padding: EdgeInsets.only(top: 10, left: 10)),
             Padding(
               child: Text(
-                "Add device",
+                name,
                 style: TextStyle(fontSize: 20),
               ),
               padding: EdgeInsets.only(top: 30, left: 25),
