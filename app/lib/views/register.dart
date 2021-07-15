@@ -4,12 +4,12 @@ import 'package:doorbell/views/dashboard.dart';
 import 'package:doorbell/views/startup.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   @override
-  State<LoginPage> createState() => LoginScreen();
+  State<RegisterPage> createState() => RegisterScreen();
 }
 
-class LoginScreen extends State<LoginPage> {
+class RegisterScreen extends State<RegisterPage> {
   @override
   Widget build(BuildContext buildContext) {
     return Scaffold(
@@ -31,11 +31,11 @@ class LoginScreen extends State<LoginPage> {
                   color: Colors.white),
             ),
             SizedBox(
-              height: 85,
+              height: 45,
             ),
-            LoginForm(),
+            RegisterForm(),
             SizedBox(
-              height: 75,
+              height: 55,
             ),
             ElevatedButton(
               onPressed: () {
@@ -48,7 +48,7 @@ class LoginScreen extends State<LoginPage> {
                 child: Padding(
                   child: Center(
                       child: Text(
-                    "Login",
+                    "Register",
                     style: TextStyle(fontSize: 21),
                   )),
                   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
@@ -65,14 +65,14 @@ class LoginScreen extends State<LoginPage> {
   }
 }
 
-class LoginForm extends StatefulWidget {
+class RegisterForm extends StatefulWidget {
   @override
-  LoginFormState createState() {
-    return LoginFormState();
+  RegisterFormState createState() {
+    return RegisterFormState();
   }
 }
 
-class LoginFormState extends State<LoginForm> {
+class RegisterFormState extends State<RegisterForm> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -132,6 +132,47 @@ class LoginFormState extends State<LoginForm> {
                 cursorColor: Theme.of(context).colorScheme.secondary,
                 decoration: InputDecoration(
                   hintText: 'Password',
+                  prefixIcon: Icon(
+                    Icons.vpn_key_sharp,
+                    color: Theme.of(context).colorScheme.secondary,
+                    size: 30,
+                  ),
+                  fillColor: Colors.white,
+                  filled: true,
+                  hintStyle: new TextStyle(color: Colors.grey[600]),
+                  focusedBorder: new OutlineInputBorder(
+                    borderRadius: const BorderRadius.all(
+                      const Radius.circular(90.0),
+                    ),
+                    borderSide: BorderSide(
+                      color: Theme.of(context).colorScheme.secondary,
+                      width: 2.0,
+                    ),
+                  ),
+                  border: new OutlineInputBorder(
+                    borderRadius: const BorderRadius.all(
+                      const Radius.circular(90.0),
+                    ),
+                  ),
+                ),
+              ),
+            )),
+        Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+            child: Theme(
+              data: ThemeData(),
+              child: TextField(
+                enableSuggestions: false,
+                autocorrect: false,
+                obscureText: true,
+                // style: TextStyle(
+                //   color: Colors.black,
+                //   decorationColor: Colors.black,
+                // ),
+                textAlign: TextAlign.center,
+                cursorColor: Theme.of(context).colorScheme.secondary,
+                decoration: InputDecoration(
+                  hintText: 'Confirm password',
                   prefixIcon: Icon(
                     Icons.vpn_key_sharp,
                     color: Theme.of(context).colorScheme.secondary,

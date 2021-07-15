@@ -149,7 +149,7 @@ class ConnectionScreen extends State<ConnectionPage> {
                                 width: 140,
                                 child: ElevatedButton(
                                   onPressed: () {
-                                    _continue();
+                                    // _continue();
                                   },
                                   child: Padding(
                                     padding:

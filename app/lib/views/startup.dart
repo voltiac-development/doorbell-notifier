@@ -1,4 +1,5 @@
 import 'package:doorbell/views/login.dart';
+import 'package:doorbell/views/register.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class StartupScreen extends State<StartupPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image(
-              width: MediaQuery.of(buildContext).size.width * 0.6,
+              width: MediaQuery.of(buildContext).size.width * 0.75,
               image: AssetImage("assets/images/logo.png"),
             ),
             Text(
@@ -45,9 +46,9 @@ class StartupScreen extends State<StartupPage> {
                     "Login",
                     style: TextStyle(fontSize: 21),
                   )),
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
                 ),
-                width: MediaQuery.of(buildContext).size.width * 0.6,
+                width: MediaQuery.of(buildContext).size.width * 0.75,
               ),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -62,7 +63,7 @@ class StartupScreen extends State<StartupPage> {
                 Navigator.push(
                     buildContext,
                     EnterExitRoute(
-                        exitPage: this.widget, enterPage: LoginPage()));
+                        exitPage: this.widget, enterPage: RegisterPage()));
               },
               child: SizedBox(
                 child: Padding(
@@ -71,9 +72,9 @@ class StartupScreen extends State<StartupPage> {
                     "Register",
                     style: TextStyle(fontSize: 21),
                   )),
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
                 ),
-                width: MediaQuery.of(buildContext).size.width * 0.6,
+                width: MediaQuery.of(buildContext).size.width * 0.75,
               ),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

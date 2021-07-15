@@ -1,5 +1,6 @@
 import 'package:doorbell/views/connect.dart';
 import 'package:doorbell/views/login.dart';
+import 'package:doorbell/views/register.dart';
 import 'package:doorbell/views/startup.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         'login': (_) => LoginPage(),
-        'register': (_) => LoginPage(),
+        'register': (_) => RegisterPage(),
         'addDevice': (_) => ConnectionPage(),
       },
     );
