@@ -10,6 +10,8 @@ import 'package:network_info_plus/network_info_plus.dart';
 import 'package:open_settings/open_settings.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import 'dashboard.dart';
+
 class ConnectionPage extends StatefulWidget {
   @override
   State<ConnectionPage> createState() => ConnectionScreen();
@@ -121,7 +123,11 @@ class ConnectionScreen extends State<ConnectionPage> {
                                 width: 140,
                                 child: ElevatedButton(
                                   onPressed: () {
-                                    _continue();
+                                    Navigator.push(
+                                        context,
+                                        EnterExitRoute(
+                                            exitPage: this.widget,
+                                            enterPage: Dashboard()));
                                   },
                                   child: Padding(
                                     padding:
@@ -149,7 +155,7 @@ class ConnectionScreen extends State<ConnectionPage> {
                                 width: 140,
                                 child: ElevatedButton(
                                   onPressed: () {
-                                    // _continue();
+                                    _continue();
                                   },
                                   child: Padding(
                                     padding:

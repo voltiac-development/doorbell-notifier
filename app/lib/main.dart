@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme(
               secondary: Color(0xFF3a506b),
               background: Color(0xFF0b132b),
-              primary: Color(0xFF6fffe9),
-              primaryVariant: Color(0xFF5bc0be),
+              primaryVariant: Color(0xFF4B8895),
+              primary: Color(0xFF5bc0be),
               secondaryVariant: Color(0xFF1c2541),
               error: Colors.red,
               onSurface: Colors.white,
