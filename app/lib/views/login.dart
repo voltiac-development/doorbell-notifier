@@ -1,7 +1,5 @@
-import 'dart:math';
-
+import 'package:doorbell/transitions/EnterExitRoute.dart';
 import 'package:doorbell/views/dashboard.dart';
-import 'package:doorbell/views/startup.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

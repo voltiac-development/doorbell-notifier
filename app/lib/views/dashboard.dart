@@ -1,8 +1,8 @@
 import 'dart:ui';
 
+import 'package:doorbell/transitions/EnterExitRoute.dart';
 import 'package:doorbell/views/connect.dart';
 import 'package:doorbell/views/device.dart';
-import 'package:doorbell/views/startup.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {

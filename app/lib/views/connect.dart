@@ -2,6 +2,9 @@ import 'dart:io';
 import 'dart:async';
 
 import 'package:doorbell/components/Bullet.dart';
+import 'package:doorbell/transitions/EnterExitRoute.dart';
+import 'package:doorbell/transitions/ExitEnterRoute.dart';
+import 'package:doorbell/views/connect_select_wifi.dart';
 import 'package:doorbell/views/startup.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -125,7 +128,7 @@ class ConnectionScreen extends State<ConnectionPage> {
                                   onPressed: () {
                                     Navigator.push(
                                         context,
-                                        EnterExitRoute(
+                                        ExitEnterRoute(
                                             exitPage: this.widget,
                                             enterPage: Dashboard()));
                                   },
@@ -230,8 +233,10 @@ class ConnectionScreen extends State<ConnectionPage> {
     print(wifiName);
 
     // if (wifiName == 'Doorbell Setup') {
-    Navigator.push(context,
-        EnterExitRoute(exitPage: this.widget, enterPage: StartupPage()));
+    Navigator.push(
+        context,
+        EnterExitRoute(
+            exitPage: this.widget, enterPage: ConnectionSelectWifi()));
     // }
   }
 }

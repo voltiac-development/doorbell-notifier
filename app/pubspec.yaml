@@ -36,6 +36,7 @@ dependencies:
   open_settings: ^2.0.1
   network_info_plus: "^1.0.2"
   permission_handler: ^8.1.2
+  wifi_iot: ^0.3.4
 
 dev_dependencies:
   flutter_test:
